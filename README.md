@@ -1,59 +1,86 @@
-# E-Commerce Sales Analytics
+# E-Commerce Sales Dashboard
 
-## Project Overview
+An interactive E-Commerce Sales Dashboard built using Power BI to analyze sales, profit, product performance, customer behavior, and payment methods.
 
-This project analyzes e-commerce sales data to understand sales performance, profitability, customer behavior, and product performance.
+## 📊 Project Overview
 
-The project uses Excel, PostgreSQL, SQL, and Power BI to perform data analysis and create an interactive dashboard.
+This project focuses on analyzing e-commerce sales data and presenting important business insights through an interactive Power BI dashboard.
 
-## Objectives
+The project uses two datasets, `Orders` and `Details`, which are connected using `Order ID`.
+
+The analysis covers:
+
+- Sales performance
+- Profitability
+- Product categories
+- Product sub-categories
+- Customer-wise sales
+- Payment methods
+- State-wise sales
+- Monthly and quarterly performance
+
+## 🎯 Objectives
 
 - Analyze overall sales and profit performance
-- Understand customer segments and purchasing behavior
-- Compare revenue across countries
-- Analyze product category and subcategory performance
-- Track monthly revenue and profit trends
-- Analyze profit margins across product categories
+- Identify high-performing states
+- Analyze quantity sold across product categories
+- Understand monthly profit trends
+- Analyze customer-wise sales
+- Understand payment method preferences
+- Identify profitable product sub-categories
+- Compare quarterly sales performance
 
-## Tools & Technologies
+## 🛠️ Tools & Technologies
 
-- Excel
-- PostgreSQL
-- SQL
 - Power BI
+- Power Query
+- DAX
+- SQL
+- PostgreSQL
+- CSV
+- Data Modeling
+- Data Visualization
 
-## Key Metrics
+## 📂 Dataset
 
-- Total Revenue: 11.37M
-- Total Profit: 2.22M
-- Total Customers: 9K
-- Total Orders: 30K
-- Average Order Value: 379
+The project uses two datasets:
 
-## Dashboard
+### Orders
 
-![E-Commerce Sales Dashboard](ecommerce_dashboard.png)
+Contains order-level information such as:
 
-## Key Analysis
+- Order ID
+- Order Date
+- Customer Name
+- State
 
-- Revenue by Customer Segment
-- Revenue by Product Category
-- Revenue by Country
-- Repeat vs One-time Customers
-- Profit Margin by Category
-- Revenue & Profit by Customer Segment
-- Monthly Revenue & Profit
-- Revenue by Product Subcategory
+### Details
 
-## Business Insights
+Contains transaction-level information such as:
 
-- Repeat customers make up a large share of the customer base, indicating strong customer retention.
-- Revenue and profit vary across product categories.
-- Profit margins differ across product categories.
-- Revenue performance varies across countries.
-- Monthly trends show changes in revenue and profit over time.
-- Product subcategories contribute differently to overall revenue.
+- Order ID
+- Amount
+- Profit
+- Quantity
+- Category
+- Sub-Category
+- Payment Mode
 
-## Project Workflow
+The `Orders` and `Details` tables are connected using `Order ID`.
 
-Excel Data → PostgreSQL → SQL Analysis → Power BI Dashboard → Business Insights
+## 🔄 Project Workflow
+
+```text
+Orders.csv + Details.csv
+          ↓
+     Data Cleaning
+          ↓
+     Data Modeling
+          ↓
+      SQL Analysis
+          ↓
+     DAX Measures
+          ↓
+   Power BI Dashboard
+          ↓
+    Business Insights
